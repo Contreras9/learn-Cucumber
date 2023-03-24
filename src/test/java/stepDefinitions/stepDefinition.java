@@ -29,9 +29,17 @@ public class stepDefinition {
         System.out.println("Validated Home page");
     }
 
-    @And("^Cards are displayed$")
-    public void Cards_are_displayed() {
-        //Validating the cards
-        System.out.println("Validated cards");
+    //Reusing functions with different data
+    @When("User logs-in into application with {string} and password {string}")
+    public void user_logs_in_into_application_with_and_password(String string, String string2) {
+        // Write code here that turns the phrase above into concrete actions
+        System.out.println(string);
+        System.out.println(string2);
+    }
+
+    @Then("Cards displayed are {string}")
+    public void cards_displayed_are(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        System.out.println(string);
     }
 }
