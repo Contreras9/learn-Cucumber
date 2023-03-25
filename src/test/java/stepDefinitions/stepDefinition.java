@@ -1,9 +1,12 @@
 package stepDefinitions;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
+import java.util.List;
 
 //Mapping StepDefinition to Feature File
 //StepDefinition file matched with tagName and description
@@ -41,5 +44,15 @@ public class stepDefinition {
     public void cards_displayed_are(String string) {
         // Write code here that turns the phrase above into concrete actions
         System.out.println(string);
+    }
+
+    @When("^User sign up with following details$")
+    public void userSignUpWithFollowingDetails(DataTable data) {
+        List<List<String>> obj = data.asLists();
+        System.out.println(obj.get(0).get(0));
+        System.out.println(obj.get(0).get(1));
+        System.out.println(obj.get(0).get(2));
+        System.out.println(obj.get(0).get(3));
+        System.out.println(obj.get(0).get(4));
     }
 }
