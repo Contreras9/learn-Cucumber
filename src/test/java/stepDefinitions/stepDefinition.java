@@ -20,6 +20,21 @@ public class stepDefinition {
         System.out.println("Navigate to login URL");
     }
 
+    @Given("validate the browser")
+    public void validateTheBrowser() {
+        System.out.println("Deciding the browser to open.");
+    }
+
+    @When("Browser is triggered")
+    public void browserIsTriggered() {
+        System.out.println("Browser is triggered.");
+    }
+
+    @Then("check if browser is displayed")
+    public void checkIfBrowserIsDisplayed() {
+        System.out.println("Browser is displayed.");
+    }
+
     @When("^User logs-in into application with username and password$")
     public void User_logs_in_into_application_with_username_and_password() {
         //Code to log-in
@@ -54,5 +69,12 @@ public class stepDefinition {
         System.out.println(obj.get(0).get(2));
         System.out.println(obj.get(0).get(3));
         System.out.println(obj.get(0).get(4));
+    }
+
+    @When("User logs-in into the application with {string} and password {string}")
+    public void user_logs_in_into_the_application_with_and_password(String string, String string2) {
+        // Write code here that turns the phrase above into concrete actions
+        System.out.println(string);
+        System.out.println(string2);
     }
 }

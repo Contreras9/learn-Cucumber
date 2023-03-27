@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
         //Parameter where is feature file located/path to the package or file
         features = "src/test/java/features",
         //Parameter to define your stepDefinitions package
-        glue = "stepDefinitions"
+        //Controlling testcase execution with tagging
+        glue = "stepDefinitions", tags = "@SmokeTest or @RegTest"
 )
 public class TestRunner {
 }
