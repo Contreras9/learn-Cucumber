@@ -10,7 +10,8 @@ import org.junit.runner.RunWith;
         features = "src/test/java/features",
         //Parameter to define your stepDefinitions package
         //Controlling testcase execution with tagging
-        glue = "stepDefinitions", tags = "@PortalTest"
+        glue = "stepDefinitions", tags = "@PortalTest", monochrome = true, dryRun = true,
+        plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json", "junit:target/cukes.xml"}
 )
 public class TestRunner {
 }
