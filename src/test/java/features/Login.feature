@@ -3,12 +3,12 @@ Feature: Application Login
   //Understanding the terminologies of automation
   //Feature file - Scenarios are written in file
 
-  Background:
-    Given validate the browser
-    When Browser is triggered
-    Then check if browser is displayed
+#  Background:
+#    Given validate the browser
+#    When Browser is triggered
+#    Then check if browser is displayed
 
-  @RegTest
+  @WebTest
   Scenario: Home page default login
     Given User is on landing page
 #  Reusing functions with different data
@@ -16,7 +16,7 @@ Feature: Application Login
     Then Home page is populated
     And Cards displayed are "true"
 
-  @SmokeTest
+  @MobileTest
   Scenario: Home page default login
     Given User is on landing page
 #  Reusing functions with different data
@@ -32,7 +32,7 @@ Feature: Application Login
     Then Home page is populated
     And Cards displayed are "false"
 
-  @SanityTest
+  @MobileTest
   Scenario: Home page default login
     Given User is on landing page
 #  Reusing functions with different data
@@ -43,7 +43,7 @@ Feature: Application Login
     And Cards displayed are "false"
 
 #  Parameterization: Scenario outline and Examples
-  @RegTest
+  @WebTest
   Scenario Outline: Home page default login
     Given User is on landing page
 #  Reusing functions with different data

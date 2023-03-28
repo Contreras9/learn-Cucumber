@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/java/features",
         //Parameter to define your stepDefinitions package
         //Controlling testcase execution with tagging
-        glue = "stepDefinitions", tags = "@SmokeTest or @RegTest"
+        glue = "stepDefinitions", tags = "@PortalTest"
 )
 public class TestRunner {
 }
